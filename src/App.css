@@ -1,0 +1,259 @@
+/* Task Status Styles */
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Task Statistics */
+.task-stats {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+
+.stat {
+  text-align: center;
+  color: white;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+/* Task Sections */
+.task-section {
+  margin: 25px 0;
+}
+
+.section-title {
+  color: white;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Task Items */
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin: 10px 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.task-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+.task-item.completed {
+  opacity: 0.7;
+  background: rgba(40, 167, 69, 0.1);
+  border-color: rgba(40, 167, 69, 0.3);
+}
+
+.task-item.in-progress {
+  background: rgba(255, 193, 7, 0.1);
+  border-color: rgba(255, 193, 7, 0.3);
+}
+
+.task-item.pending {
+  background: rgba(108, 117, 125, 0.1);
+  border-color: rgba(108, 117, 125, 0.3);
+}
+
+/* Task Content */
+.task-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-name {
+  font-size: 1.1em;
+  color: white;
+  font-weight: 500;
+}
+
+.task-name.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.task-meta {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.status-badge {
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  color: white;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+/* Management Buttons */
+.manage-btn {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.manage-btn button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.85em;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+/* Status Action Buttons */
+.status-btn {
+  color: white !important;
+}
+
+.start-btn {
+  background-color: #007bff;
+}
+
+.start-btn:hover {
+  background-color: #0056b3;
+}
+
+.complete-btn {
+  background-color: #28a745;
+}
+
+.complete-btn:hover {
+  background-color: #1e7e34;
+}
+
+.pause-btn {
+  background-color: #ffc107;
+  color: #000 !important;
+}
+
+.pause-btn:hover {
+  background-color: #e0a800;
+}
+
+.reopen-btn {
+  background-color: #6c757d;
+}
+
+.reopen-btn:hover {
+  background-color: #545b62;
+}
+
+/* Edit and Delete Buttons */
+.edit-btn {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #138496;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1em;
+}
+
+/* Input Enhancement */
+.input-wrapper input {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #333;
+}
+
+.input-wrapper input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .task-stats {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .task-item {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+  
+  .manage-btn {
+    justify-content: center;
+  }
+  
+  .manage-btn button {
+    flex: 1;
+    min-width: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    padding: 10px;
+  }
+  
+  .task-stats {
+    flex-direction: row;
+    padding: 10px;
+  }
+  
+  .stat-number {
+    font-size: 1.5em;
+  }
+  
+  .manage-btn {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  
+  .manage-btn button {
+    font-size: 0.8em;
+    padding: 5px 8px;
+  }
+}

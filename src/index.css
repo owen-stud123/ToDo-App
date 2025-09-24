@@ -1,0 +1,85 @@
+body {
+  font-family: Arial, sans-serif;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url(./assets/Vnhx0Ol-background-pic.jpg);
+  background-size: cover;
+}
+
+.App {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+h1 {
+ margin-top: 0 ;
+}
+
+.input-wrapper {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1;
+}
+button {
+  padding: 10px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px ;
+  margin-bottom: 10px;
+}
+
+li div button {
+  background-color: #dc3545;
+}
+
+li div button:hover {
+  background-color: #c82333;
+}
+
+li div button:first-child {
+  margin-right: 10px;
+ background-color: #ffc107;
+}
+
+li div button:first-child:hover {
+ background-color: #e0a800;
+}
+
+.manage-btn {
+  margin-left: 20px;
+  margin-right: 5px;
+  display: flex;
+  justify-content: end;
+}
