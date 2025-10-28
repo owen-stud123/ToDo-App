@@ -191,7 +191,7 @@ function App() {
 
       {data.length === 0 && (
         <div className="empty-state">
-          <p>No tasks yet. Add your first task above! 📝</p>
+          <p>No tasks yet. Add your first task above!</p>
         </div>
       )}
     </div>
